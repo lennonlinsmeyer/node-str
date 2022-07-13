@@ -7,7 +7,9 @@ const mongoose = require('mongoose');
 const app = express();
 const router = express.Router();
 
-mongoose.connect('mongodb://localhost:27017/ndstr');
+mongoose.connect('mongodb://{username}:{password}@localhost:27017/?authMechanism=DEFAULT');
+
+const Product = require('./models/product')
 
 // Carrega as rotas
 const indexRoute = require('./routes/index-route');
