@@ -15,7 +15,7 @@ exports.get = (req, res, next) => {
 }
 
 exports.getBySlug = (req, res, next) => {
-    Product.find({
+    Product.findOne({
         slug: req.params.slug,
         active: true
     }, 'title description price slug tags')
